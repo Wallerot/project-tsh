@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <script type="text/javascript" charset="utf8" src="js/dataTables.min.js"></script>
+  <script>
+  $(document).ready(function() {
+      $('#suppliersTable').DataTable(
+        {
+          "paging": true,
+          "searching": false,
+          "ordering":  false,
+          "lengthChange":false,
+          "info": false,
+          "pageLength": 5
+        }
+      );
+  } );
+</script>
+  <title>Where your money goes</title>
+</head>
+<body>
+  <div id="background-wrapper">
+  <div id="wrapper">
+    <section id="header">
+      <div id="page-banner">
+        <h1 class="title">Where your money goes</h1>
+        <p>Payments made by Chichester District Council to individual suppliers with a value over £500 made within October.</p>
+        <hr>
+        <form id="search-suppliers">
+          <input type="text" placeholder="Search suppliers" />
+          <input list="rating" name="rating" placeholder="Select pound rating" />
+          <datalist id="rating">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+          </datalist>
+          <button id="reset-btn">Reset</button>
+          <button id="search-btn">Search</button>
+        </form>
+      </div>
+    </section>
+    <section id="suppliers-list">
+      <table id="suppliersTable">
+        <thead id="table-columns">
+        <tr>
+          <th>Supplier</th>
+          <th>Pound rating</th>
+          <th>Reference</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="supplier-name">Supplier name</td>
+          <td class="supplier-rating">3/5</td>
+          <td class="supplier-reference">45697845</td>
+          <td class="supplier-value">$1,620</td>
+        </tr>
+        <tr>
+          <td class="supplier-name">Supplier name</td>
+          <td class="supplier-rating">3/5</td>
+          <td class="supplier-reference">45697845</td>
+          <td class="supplier-value">$1,620</td>
+        </tr>
+        <tr>
+          <td class="supplier-name">Supplier name</td>
+          <td class="supplier-rating">3/5</td>
+          <td class="supplier-reference">45697845</td>
+          <td class="supplier-value">$1,620</td>
+        </tr>
+        <tr>
+          <td class="supplier-name">Supplier name</td>
+          <td class="supplier-rating">3/5</td>
+          <td class="supplier-reference">45697845</td>
+          <td class="supplier-value">$1,620</td>
+        </tr>
+        <tr>
+          <td class="supplier-name">Supplier name</td>
+          <td class="supplier-rating">3/5</td>
+          <td class="supplier-reference">45697845</td>
+          <td class="supplier-value">$1,620</td>
+        </tr>
+      </tbody>
+      </table>
+  </div>
+</div>
+</body>
